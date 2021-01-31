@@ -1,0 +1,43 @@
+.menu_box{
+  color: white;
+  font-family: 'Russo One', sans-serif;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2000;
+  background: rgb(2,0,36);
+background: radial-gradient(circle, rgba(2,0,36,1) 15%, rgba(68,55,95,1) 58%, rgba(101,99,111,1) 90%);
+}
+.menu_content{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.menu_list{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu_li{
+  margin: 35px;
+  font-size: 64px;
+  width: 40vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+}
+.menu_a{
+  display: block;
+  position: absolute;
+}
+.menu_link{
+  text-decoration: none;
+  color: white;
+}
