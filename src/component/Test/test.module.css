@@ -7,3 +7,20 @@
   display: flex;
   justify-content: space-around;
 }
+
+.button{
+  padding: 15px;
+  margin: 20px;
+  background: royalblue;
+  color: white;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.text_result{
+  width: 20vw;
+  background-color: darkorange;
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+  transition: all 1s ease-in-out;
+}
