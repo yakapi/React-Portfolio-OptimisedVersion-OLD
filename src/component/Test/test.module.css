@@ -1,0 +1,9 @@
+.titre{
+  font-size: 38px;
+  font-weight: bold;
+}
+.box_one{
+  margin: 50px;
+  display: flex;
+  justify-content: space-around;
+}

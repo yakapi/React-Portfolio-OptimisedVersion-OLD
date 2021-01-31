@@ -1,0 +1,11 @@
+.bg_box{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: -100px;
+  z-index: -100px;
+}
+.background_box{
+  height: 140vh;
+  width: 140vw;
+}

@@ -1,0 +1,58 @@
+.encard_hero{
+  height: 70vh;
+  width: 70vw;
+  z-index: 500;
+  position: absolute;
+  top: 18vh;
+  right: -7vw;
+}
+
+.enc_flamy1{
+  width: 15vw;
+  height: 15vh;
+  position: absolute;
+  z-index: 50;
+  top: 18vh;
+  left: 8vw;
+}
+.enc_flamy2{
+  width: 25vw;
+  height: 25vh;
+  position: absolute;
+  z-index: 600;
+  top: 50vh;
+  left: -1vw;
+  opacity: 0.9;
+}
+.enc_flamy3{
+  width: 10vw;
+  height: 10vh;
+  position: absolute;
+  z-index: 600;
+  top: 33vh;
+  left: 23vw;
+}
+.enc_flamy4{
+  width: 5vw;
+  height: 5vh;
+  position: absolute;
+  z-index: 600;
+  top: 17vh;
+  left: 30vw;
+}
+.enc_flamy5{
+  width: 8vw;
+  height: 8vh;
+  position: absolute;
+  z-index: 600;
+  top: 37vh;
+  left: 1vw;
+}
+.enc_flamy6{
+  width: 12vw;
+  height: 12vh;
+  position: absolute;
+  z-index: 600;
+  top: 55vh;
+  left: 28vw;
+}
