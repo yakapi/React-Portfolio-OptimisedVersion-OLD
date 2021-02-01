@@ -12,16 +12,15 @@ class Menu extends Component {
     }
   }
   componentDidUpdate(){
-    console.log('MENU UPDATE');
+    // console.log('MENU UPDATE');
   }
   componentDidMount(){
-    console.log('MENU MUNT');
+    // console.log('MENU MUNT');
   }
   componentWillUnmount(){
-    console.log('MENU UNMUNT');
+    // console.log('MENU UNMUNT');
   }
   render () {
-    console.log(this.props.showMenu);
     let showMenuEffect = {
       top: '-100%',
       left: '-150%',

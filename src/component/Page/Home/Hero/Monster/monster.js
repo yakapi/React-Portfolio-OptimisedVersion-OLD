@@ -54,58 +54,61 @@ class Monster extends Component {
       translateFlUpY: 0,
     }
   }
+  monsterMove = (et)=>{
+    var screen_width = window.innerWidth;
+    var x_0 = screen_width / 2;
+    var screen_height = window.innerHeight;
+    var y_0 = screen_height / 2;
+
+    var MousePosX = et.clientX
+    var MousePosY = et.clientY
+
+    if (MousePosX < x_0) {
+      let translateX_value_left = x_0 - MousePosX
+      let translateX_value_left_effect = translateX_value_left / 25
+      let translateFlUpY_value_left = x_0 - MousePosX
+      let translateFlUpY_value_left_effect = translateFlUpY_value_left / 45
+      this.setState({translateX: -translateX_value_left_effect})
+      this.setState({translateFlUpY: -translateFlUpY_value_left_effect})
+      this.setState({translateFlDownY: translateFlUpY_value_left_effect})
+
+    }else{
+      let translateX_value_right = MousePosX - x_0
+      let translateX_value_right_effect = translateX_value_right / 25
+      let translateFlUpY_value_right = MousePosX - x_0
+      let translateFlUpY_value_right_effect = translateFlUpY_value_right / 45
+      this.setState({translateFlUpY: translateFlUpY_value_right_effect})
+      this.setState({translateFlDownY: -translateFlUpY_value_right_effect})
+      this.setState({translateX: translateX_value_right_effect})
+    }
+
+    if (MousePosY < y_0) {
+      let translateY_value_top = y_0 - MousePosY
+      let translateY_value_top_effect = translateY_value_top / 25
+      let translateFlUpX_value_top = y_0 - MousePosY
+      let translateFlUpX_value_top_effect = translateFlUpX_value_top / 45
+      this.setState({translateY: -translateY_value_top_effect})
+      this.setState({translateFlUpX: -translateFlUpX_value_top_effect})
+      this.setState({translateFlDownX: translateFlUpX_value_top_effect})
+    }else {
+      let translateY_value_down = MousePosY - y_0
+      let translateY_value_down_effect = translateY_value_down / 25
+      let translateFlUpX_value_down = MousePosY - y_0
+      let translateFlUpX_value_down_effect = translateFlUpX_value_down / 45
+      this.setState({translateY: translateY_value_down_effect})
+      this.setState({translateFlUpX: translateFlUpX_value_down_effect})
+      this.setState({translateFlDownX: -translateFlUpX_value_down_effect})
+    }
+
+  }
   componentDidMount(){
-
-    document.addEventListener('mousemove', (et)=>{
-      var screen_width = window.innerWidth;
-      var x_0 = screen_width / 2;
-      var screen_height = window.innerHeight;
-      var y_0 = screen_height / 2;
-
-      var MousePosX = et.clientX
-      var MousePosY = et.clientY
-
-      if (MousePosX < x_0) {
-        let translateX_value_left = x_0 - MousePosX
-        let translateX_value_left_effect = translateX_value_left / 25
-        let translateFlUpY_value_left = x_0 - MousePosX
-        let translateFlUpY_value_left_effect = translateFlUpY_value_left / 45
-        this.setState({translateX: -translateX_value_left_effect})
-        this.setState({translateFlUpY: -translateFlUpY_value_left_effect})
-        this.setState({translateFlDownY: translateFlUpY_value_left_effect})
-
-      }else{
-        let translateX_value_right = MousePosX - x_0
-        let translateX_value_right_effect = translateX_value_right / 25
-        let translateFlUpY_value_right = MousePosX - x_0
-        let translateFlUpY_value_right_effect = translateFlUpY_value_right / 45
-        this.setState({translateFlUpY: translateFlUpY_value_right_effect})
-        this.setState({translateFlDownY: -translateFlUpY_value_right_effect})
-        this.setState({translateX: translateX_value_right_effect})
-      }
-
-      if (MousePosY < y_0) {
-        let translateY_value_top = y_0 - MousePosY
-        let translateY_value_top_effect = translateY_value_top / 25
-        let translateFlUpX_value_top = y_0 - MousePosY
-        let translateFlUpX_value_top_effect = translateFlUpX_value_top / 45
-        this.setState({translateY: -translateY_value_top_effect})
-        this.setState({translateFlUpX: -translateFlUpX_value_top_effect})
-        this.setState({translateFlDownX: translateFlUpX_value_top_effect})
-      }else {
-        let translateY_value_down = MousePosY - y_0
-        let translateY_value_down_effect = translateY_value_down / 25
-        let translateFlUpX_value_down = MousePosY - y_0
-        let translateFlUpX_value_down_effect = translateFlUpX_value_down / 45
-        this.setState({translateY: translateY_value_down_effect})
-        this.setState({translateFlUpX: translateFlUpX_value_down_effect})
-        this.setState({translateFlDownX: -translateFlUpX_value_down_effect})
-      }
-
-    })
+    document.addEventListener('mousemove', this.monsterMove)
   }
   componentDidUpdate(){
     // console.log('composant a update:' + this.state.translateX);
+  }
+  componentWillUnmount(){
+    document.removeEventListener('mousemove', this.monsterMove)    
   }
   render() {
 

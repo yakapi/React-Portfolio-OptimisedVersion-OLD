@@ -16,7 +16,6 @@ class Bar extends Component {
     }
   }
   toggleMenu = (e)=>{
-    console.log(this.state.showMenu);
     if (this.state.showMenu === false) {
       this.setState({showMenu: !this.state.showMenu})
       setTimeout(()=>{

@@ -15,13 +15,13 @@ class Page extends Component {
     }
   }
   componentWillUnmount(){
-    console.log(`Page ${this.props.name} : UNMOUNT`);
+    // console.log(`Page ${this.props.name} : UNMOUNT`);
   }
   componentDidMount(){
-    console.log(`Page ${this.props.name} : MOUNT`);
+    // console.log(`Page ${this.props.name} : MOUNT`);
   }
   componentDidUpdate(){
-    console.log(`Page ${this.props.name} : UPDATE`);
+    // console.log(`Page ${this.props.name} : UPDATE`);
   }
   render () {
       if (this.props.name === 'contact') {

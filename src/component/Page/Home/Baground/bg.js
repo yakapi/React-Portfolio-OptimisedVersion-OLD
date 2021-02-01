@@ -21,38 +21,42 @@ class Background extends Component {
       translateY: 0
     }
   }
+  bgMove = (et)=>{
+    var screen_width = window.innerWidth;
+    var x_0 = screen_width / 2;
+    var screen_height = window.innerHeight;
+    var y_0 = screen_height / 2;
+
+    var MousePosX = et.clientX
+    var MousePosY = et.clientY
+
+    if (MousePosX < x_0) {
+      let translateX_value_left = x_0 - MousePosX
+      let translateX_value_left_effect = translateX_value_left / 35
+      this.setState({translateX: translateX_value_left_effect})
+
+    }else{
+      let translateX_value_right = MousePosX - x_0
+      let translateX_value_right_effect = translateX_value_right / 35
+      this.setState({translateX: -translateX_value_right_effect})
+    }
+
+    if (MousePosY < y_0) {
+      let translateY_value_top = y_0 - MousePosY
+      let translateY_value_top_effect = translateY_value_top / 35
+      this.setState({translateY: translateY_value_top_effect})
+    }else {
+      let translateY_value_down = MousePosY - y_0
+      let translateY_value_down_effect = translateY_value_down / 35
+      this.setState({translateY: -translateY_value_down_effect})
+    }
+
+  }
   componentDidMount(){
-    document.addEventListener('mousemove', (et)=>{
-      var screen_width = window.innerWidth;
-      var x_0 = screen_width / 2;
-      var screen_height = window.innerHeight;
-      var y_0 = screen_height / 2;
-
-      var MousePosX = et.clientX
-      var MousePosY = et.clientY
-
-      if (MousePosX < x_0) {
-        let translateX_value_left = x_0 - MousePosX
-        let translateX_value_left_effect = translateX_value_left / 35
-        this.setState({translateX: translateX_value_left_effect})
-
-      }else{
-        let translateX_value_right = MousePosX - x_0
-        let translateX_value_right_effect = translateX_value_right / 35
-        this.setState({translateX: -translateX_value_right_effect})
-      }
-
-      if (MousePosY < y_0) {
-        let translateY_value_top = y_0 - MousePosY
-        let translateY_value_top_effect = translateY_value_top / 35
-        this.setState({translateY: translateY_value_top_effect})
-      }else {
-        let translateY_value_down = MousePosY - y_0
-        let translateY_value_down_effect = translateY_value_down / 35
-        this.setState({translateY: -translateY_value_down_effect})
-      }
-
-    })
+    document.addEventListener('mousemove', this.bgMove)
+  }
+  componentWillUnmount(){
+    document.removeEventListener('mousemove', this.bgMove)    
   }
   render() {
     return (

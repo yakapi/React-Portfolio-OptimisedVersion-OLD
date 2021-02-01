@@ -3,6 +3,7 @@ import PageProjectStyle from './project.module.css'
 import Bar from '../../Bar/bar'
 import ContactForm from './ContactForm/contact'
 import MapLeaf from './Map/map'
+import Loader from '../../Loader/loader'
 
 import email from './email.svg'
 import markLocation from './maps-and-flags.svg'
@@ -21,6 +22,7 @@ class ContactPage extends Component {
 
     return (
       <div className={PageProjectStyle.page_content}>
+        <Loader />
         <Bar />
         <ScreenContact />
       </div>

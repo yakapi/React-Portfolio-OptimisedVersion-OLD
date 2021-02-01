@@ -42,20 +42,6 @@ class AboutCard extends Component {
     }else {
       animR1 = {}
     }
-    if (this.props.aRight2 === true) {
-      animR2 = {
-        left : '110%'
-      }
-    }else {
-      animR2 = {}
-    }
-    if (this.props.aRight3 === true) {
-      animR3 = {
-        top : '110%'
-      }
-    }else {
-      animR3 = {}
-    }
     if (this.props.aRight4 === true) {
       animR4 = {
         opacity : '1'
