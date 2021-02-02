@@ -116,3 +116,15 @@
   opacity: 0;
 
 }
+.opa{
+  opacity: 1;
+}
+.transX{
+  transform: translateX(0);
+}
+.transY{
+  transform: translateY(0);
+}
+.scale{
+  transform: scale(1) translateX(0) translateY(0);
+}
