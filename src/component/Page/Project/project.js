@@ -3,6 +3,7 @@ import ProjectPageStyle from './project.module.css'
 import Bar from '../../Bar/bar'
 import animopolis from './animopolis.jpg'
 import bombermeuh_mock from './bombermeuh-all.png'
+import animopolis_mock from './Animopolis_mac.png'
 import wordpress from './wordpress.svg'
 import javascript from './javascript.svg'
 import arrow from './right.svg'
@@ -82,7 +83,7 @@ class ScreenView extends Component {
         describe: 'Site Vitrine construit en WordPress pour une animalerie',
         number: '01',
         image_affiche: animopolis,
-        image_mockup: bombermeuh_mock,
+        image_mockup: animopolis_mock,
         image_techno: wordpress,
         color: '#CCA841',
         opacity: opacityP1,
