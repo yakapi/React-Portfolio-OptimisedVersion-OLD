@@ -23,7 +23,6 @@ background: radial-gradient(circle, rgba(2,0,36,1) 15%, rgba(68,55,95,1) 58%, rg
 }
 .menu_li{
   margin: 35px;
-  font-size: 64px;
   width: 40vw;
   height: 10vh;
   display: flex;
@@ -40,4 +39,23 @@ background: radial-gradient(circle, rgba(2,0,36,1) 15%, rgba(68,55,95,1) 58%, rg
 .menu_link{
   text-decoration: none;
   color: white;
+}
+@media (min-width: 375px) {
+  .menu_li{
+    font-size: 28px;
+  }
+}
+
+
+@media (min-width: 768px) {  }
+
+
+@media (min-width: 992px) {  }
+
+@media (min-width: 1000px) {
+  .menu_li{
+    font-size: 64px;
+  }
+}
+@media (min-width: 1500px) {
 }

@@ -1,10 +1,7 @@
 .encard_hero{
   height: 70vh;
-  width: 70vw;
   z-index: 500;
   position: absolute;
-  top: 18vh;
-  right: -7vw;
 }
 
 .enc_flamy1{
@@ -20,7 +17,6 @@
   height: 25vh;
   position: absolute;
   z-index: 600;
-  top: 50vh;
   left: -1vw;
   opacity: 0.9;
 }
@@ -55,4 +51,34 @@
   z-index: 600;
   top: 55vh;
   left: 28vw;
+}
+@media (min-width: 375px) {
+  .encard_hero{
+    width: 45vw;
+    top: 30vh;
+    right: 0;
+  }
+  .enc_flamy2{
+    top: 60vh;
+  }
+}
+
+
+@media (min-width: 768px) {  }
+
+
+@media (min-width: 992px) {  }
+
+@media (min-width: 1000px) {
+  .encard_hero{
+    width: 70vw;
+    top: 18vh;
+    right: -7vw;
+  }
+  .enc_flamy2{
+    top: 50vh;
+  }
+
+}
+@media (min-width: 1500px) {
 }

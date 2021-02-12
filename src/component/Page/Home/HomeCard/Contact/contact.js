@@ -85,13 +85,13 @@ class ContactCard extends Component {
       <div className={ContactCardStyle.project_size}>
         <div className={ContactCardStyle.size_zone}>
           <div className={ContactCardStyle.p_leftBox}>
-            <p style={animL1} ref={this.animL1} className={ContactCardStyle.titleP}>A Propos</p>
+            <p style={animL1} ref={this.animL1} className={ContactCardStyle.titleP}>Me Joindre</p>
             <div style={animL2} ref={this.animL2} className={ContactCardStyle.line_enc}>
               <div className={ContactCardStyle.line1}></div>
               <div className={ContactCardStyle.line2}></div>
             </div>
             <div>
-              <p style={animL3} ref={this.animL3} className={ContactCardStyle.into}>curriculum</p>
+              <p style={animL3} ref={this.animL3} className={ContactCardStyle.into}>contactez-moi</p>
             </div>
             <div style={animL4} ref={this.animL4} className={ContactCardStyle.btn}>
               <BtnMore name='Voir Plus'/>
@@ -110,7 +110,7 @@ class ContactCard extends Component {
                   <p style={animR44} ref={this.animR44} className={ContactCardStyle.nfx}>03</p>
                 </div>
                 <div style={animR5} ref={this.animR5} className={ContactCardStyle.works}>
-                  <p style={animR55} ref={this.animR55} className={ContactCardStyle.wfx}>Maling</p>
+                  <p style={animR55} ref={this.animR55} className={ContactCardStyle.wfx}>Mailing</p>
                 </div>
               </div>
             </div>

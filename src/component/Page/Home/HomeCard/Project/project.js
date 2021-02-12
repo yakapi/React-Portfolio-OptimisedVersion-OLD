@@ -84,13 +84,13 @@ class ProjectCard extends Component {
       <div className={ProjectCardStyle.project_size}>
         <div className={ProjectCardStyle.size_zone}>
           <div className={ProjectCardStyle.p_leftBox}>
-            <p style={animL1} ref={this.animL1} className={ProjectCardStyle.titleP}>A Propos</p>
+            <p style={animL1} ref={this.animL1} className={ProjectCardStyle.titleP}>Mes Projets</p>
             <div style={animL2} ref={this.animL2} className={ProjectCardStyle.line_enc}>
               <div className={ProjectCardStyle.line1}></div>
               <div className={ProjectCardStyle.line2}></div>
             </div>
             <div>
-              <p style={animL3} ref={this.animL3} className={ProjectCardStyle.into}>curriculum</p>
+              <p style={animL3} ref={this.animL3} className={ProjectCardStyle.into}>Web Dev</p>
             </div>
             <div style={animL4} ref={this.animL4} className={ProjectCardStyle.btn}>
               <BtnMore name='Voir Plus'/>
