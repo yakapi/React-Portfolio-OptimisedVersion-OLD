@@ -97,7 +97,6 @@
   font-weight: bold;
   height: 25px;
   width: 100px;
-  margin-left: 55px;
   cursor: pointer;
   transition: all .1s ease-in-out;
 }
@@ -124,6 +123,13 @@
   .form{
     align-items: flex-end;
   }
+  .custom_textarea{
+    margin-left: 86px;
+  }
+  .subutton{
+    margin-left: 0px;
+    margin-right: 35px;
+  }
 }
 
 
@@ -137,8 +143,7 @@
     width: 250px;
   }
   .intro_contact{
-    border: 2px solid red;
-    width: 150px;
+    width: auto;
   }
 
   .contactForm_box{
@@ -153,6 +158,13 @@
   }
   .form{
     align-items: flex-start;
+  }
+  .custom_textarea{
+    margin-left: 26px;
+  }
+  .subutton{
+    margin-left: 55px;
+    margin-right: 0px;
   }
 }
 @media (min-width: 1500px) {

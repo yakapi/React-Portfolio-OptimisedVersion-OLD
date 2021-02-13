@@ -68,10 +68,10 @@
     transform: translateX(0vw);
   }
   .info_box{
-    width: 25vw;
+    width: 45vw;
     height: 80%;
-    background: #0851AB;
-    color: white;
+    background: #F9F8F4;
+    color: #0851AB;
     font-family: helvetica;
     padding: 40px;
     display: flex;

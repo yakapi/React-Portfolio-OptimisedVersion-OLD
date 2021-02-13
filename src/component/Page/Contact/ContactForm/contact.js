@@ -152,9 +152,6 @@ class ContactForm extends Component {
     if (this.state.sucess === true) {
       text.sucess = "Message envoyé avec succès"
     }
-    let area = {
-      marginLeft: "26px"
-    }
     return (
       <div className={ContactFormStyle.contactForm_box}>
         <div className={ContactFormStyle.intro_contact}>
@@ -209,7 +206,7 @@ class ContactForm extends Component {
           </div>
           <div className={ContactFormStyle.textarea_line}>
             <div className={ContactFormStyle.custext}>
-              <textarea style={area} className={ContactFormStyle.custom_textarea} name="message" placeholder="message" />
+              <textarea className={ContactFormStyle.custom_textarea} name="message" placeholder="message" />
             </div>
           </div>
           <div className={ContactFormStyle.contact_line}>
