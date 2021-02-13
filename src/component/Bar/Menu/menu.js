@@ -22,7 +22,7 @@ class Menu extends Component {
   }
   render () {
     let showMenuEffect = {
-      top: '-100%',
+      top: '-120%',
       left: '-150%',
       opacity: '0',
       borderRadius: '100%',

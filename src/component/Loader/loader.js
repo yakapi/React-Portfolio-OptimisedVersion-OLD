@@ -36,7 +36,7 @@ class Loader extends Component {
     }
     if (this.state.isLoaded === true) {
       style = {
-        top: '-110%'
+        top: '-150%'
       }
     }
     return (
