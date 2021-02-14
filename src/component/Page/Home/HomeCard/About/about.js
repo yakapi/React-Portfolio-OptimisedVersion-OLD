@@ -79,9 +79,18 @@ class AboutCard extends Component {
   render() {
     var animL1, animL2, animL3, animL4 = {}
     var animR1, animR2, animR3, animR4, animR5 , animR55, animR44 = {}
+    let responsive_test = window.innerWidth;
+    let mobile_value = window.innerHeight;
+    let mobile_val_height = mobile_value + 'px';
+    let mobile_height = {}
+    if (responsive_test < 450) {
+      mobile_height = {
+        height: mobile_val_height
+      }
+    }
     return (
-      <div className={AboutCardStyle.project_size}>
-        <div className={AboutCardStyle.size_zone}>
+      <div style={mobile_height} className={AboutCardStyle.project_size}>
+        <div style={mobile_height} className={AboutCardStyle.size_zone}>
           <div className={AboutCardStyle.p_leftBox}>
             <p style={animL1} ref={this.animL1} className={AboutCardStyle.titleP}>A Propos</p>
             <div style={animL2} ref={this.animL2} className={AboutCardStyle.line_enc}>

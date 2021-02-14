@@ -56,11 +56,20 @@ class Background extends Component {
     document.addEventListener('mousemove', this.bgMove)
   }
   componentWillUnmount(){
-    document.removeEventListener('mousemove', this.bgMove)    
+    document.removeEventListener('mousemove', this.bgMove)
   }
   render() {
+    let responsive_test = window.innerWidth;
+    let mobile_value = window.innerHeight;
+    let mobile_height = {}
+    if (responsive_test < 450) {
+      let height_value = mobile_value + 'px'
+      mobile_height = {
+        height: height_value
+      }
+    }
     return (
-      <div className={ BgStyle.bg_box }>
+      <div style={mobile_height} className={ BgStyle.bg_box }>
         <BackgroundEffect translateX={this.state.translateX} translateY={this.state.translateY}/>
       </div>
     )

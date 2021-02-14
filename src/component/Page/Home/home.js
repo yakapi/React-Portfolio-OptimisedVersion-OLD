@@ -43,6 +43,8 @@ function ShowBar({stateBar}){
   var line3 = {}
   var line0 = {}
   var pos = {}
+  let responsive_test = window.innerWidth;
+  let mobile_value = window.innerHeight;
   if (stateBar === 0) {
     line0 = {
       width: '67px'
@@ -51,8 +53,15 @@ function ShowBar({stateBar}){
     line0 = {}
   }
   if (stateBar === 1) {
-    pos = {
-      transform: 'translateY(100vh)'
+    if (responsive_test < 450) {
+      let y_value = mobile_value
+      pos = {
+        transform: 'translateY('+y_value+'px)'
+      }
+    }else{
+      pos = {
+        transform: 'translateY(100vh)'
+      }
     }
     line1 = {
       width: '67px'
@@ -61,8 +70,15 @@ function ShowBar({stateBar}){
     line1 = {}
   }
   if (stateBar === 2) {
-    pos = {
-      transform: 'translateY(200vh)'
+    if (responsive_test < 450) {
+      let y_value = mobile_value * 2
+      pos = {
+        transform: 'translateY('+y_value+'px)'
+      }
+    }else{
+      pos = {
+        transform: 'translateY(200vh)'
+      }
     }
     line2 = {
       width: '67px'
@@ -71,8 +87,15 @@ function ShowBar({stateBar}){
     line2 = {}
   }
   if (stateBar === 3) {
-    pos = {
-      transform: 'translateY(300vh)'
+    if (responsive_test < 450) {
+      let y_value = mobile_value * 3
+      pos = {
+        transform: 'translateY('+y_value+'px)'
+      }
+    }else{
+      pos = {
+        transform: 'translateY(300vh)'
+      }
     }
     line3 = {
       width: '67px'
@@ -207,23 +230,44 @@ class Screen extends Component {
     // console.log(`RENDER state ${this.state.wheelState}`);
     var test = {}
     let ProjectState, AboutState, ContactState = 0
+    let responsive_test = window.innerWidth;
+    let mobile_value = window.innerHeight;
     if (this.state.wheelState === 1) {
       ProjectState = 1
-      test = {
-        transform: 'translateY(-100vh)'
+      if (responsive_test < 450) {
+        let y_value = mobile_value
+        test = {
+          transform: 'translateY(-'+y_value+'px)'
+        }
+      }else {
+        test = {
+          transform: 'translateY(-100vh)'
+        }
       }
-
     }else if (this.state.wheelState === 2) {
-      test = {
-        transform: 'translateY(-200vh)'
-      }
       AboutState = 2
-
-    }else if (this.state.wheelState === 3) {
-      test = {
-        transform: 'translateY(-300vh)'
+      if (responsive_test < 450) {
+        let y_value = mobile_value * 2
+        test = {
+          transform: 'translateY(-'+y_value+'px)'
+        }
+      }else {
+        test = {
+          transform: 'translateY(-200vh)'
+        }
       }
+    }else if (this.state.wheelState === 3) {
       ContactState = 3
+      if (responsive_test < 450) {
+        let y_value = mobile_value * 3
+        test = {
+          transform: 'translateY(-'+y_value+'px)'
+        }
+      }else {
+        test = {
+          transform: 'translateY(-300vh)'
+        }
+      }
     }else {
       test = {}
 

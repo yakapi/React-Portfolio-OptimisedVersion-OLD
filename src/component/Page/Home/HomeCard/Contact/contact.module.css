@@ -1,5 +1,6 @@
 .project_size{
   height: 100vh;
+  overflow: hidden;
 }
 .size_zone{
   height: 100vh;
@@ -7,6 +8,7 @@
   justify-content: flex-start;
   align-items: center;
   position: relative;
+
 }
 .p_rightBox{
   position: relative;
@@ -113,6 +115,7 @@
 @media (min-width: 375px) {
   .size_zone{
     flex-direction: column-reverse;
+    margin-top: 10vh;
   }
   .p_rightZone{
     position: relative;
@@ -161,7 +164,11 @@
 }
 
 
-@media (min-width: 768px) {  }
+@media (min-width: 768px) {
+  .size_zone{
+    margin-top: 0vh;
+  }
+ }
 
 
 @media (min-width: 992px) {  }

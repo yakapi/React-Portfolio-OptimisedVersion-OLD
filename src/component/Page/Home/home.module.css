@@ -45,6 +45,16 @@
   background: white;
 	transition: .8s all ease-in-out;
 }
+@media (min-width: 318px) {
+  .showBar{
+    display: none;
+  }
+  .scrollBox{
+    display: none;
+  }
+
+ }
+
 @media (min-width: 375px) {
   .showBox{
     height: 80px;
@@ -65,7 +75,14 @@
 }
 
 
-@media (min-width: 768px) {  }
+@media (min-width: 768px) {
+  .showBar{
+    display: flex;
+  }
+  .scrollBox{
+    display: block;
+  }
+ }
 
 
 @media (min-width: 992px) {  }
