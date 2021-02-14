@@ -15,8 +15,17 @@ class HomePage extends Component {
     console.log("HOME UPDATE");
   }
   render () {
+    let responsive_test = window.innerWidth;
+    let mobile_value = window.innerHeight;
+    let mobile_val_height = mobile_value + 'px';
+    let mobile_height = {}
+    if (responsive_test < 450) {
+      mobile_height = {
+        height: mobile_val_height
+      }
+    }
     return (
-      <div className={HomeStyle.home_container}>
+      <div style={mobile_height} className={HomeStyle.home_container}>
         <Loader/>
         <Bar />
         <Background />
